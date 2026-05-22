@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --blueviolet: rgb(138, 43, 226);
+}
 *{
     box-sizing: border-box;
 }
@@ -30,7 +33,7 @@ button{
     border: 1px solid rgba(0,0,0,0.5);
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     color: white;
-    background-color: rgb(138, 43, 226);
+    background-color: var(--blueviolet);
 }
 button:hover{
     background-color: rgb(115, 11, 159);
@@ -104,10 +107,6 @@ header a:hover{
 
 #hero button{
     font-size: 1.75em;
-}
-
-#about{
-
 }
 
 #about .container{
