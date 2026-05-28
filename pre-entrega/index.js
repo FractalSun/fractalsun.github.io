@@ -78,6 +78,28 @@ async function programa_principal(argumentos = []) {
                 console.log("solicitud incompleta")
                 break;
             }
+        case "DELETE":
+            if(argumentos[1].includes("/") && argumentos[1].includes("products")){
+                let id_sin_separar = argumentos[1].split("/")
+                try{
+                    const id = parseInt(id_sin_separar[1])
+                    const response = await fetch(`${url_API}/products/${id}`,{
+                        method: "DELETE"
+                    })
+                    if (!response.ok){
+                        throw new Error("Error en la solicitud")
+                        break;
+                    }
+                    const data = await response.json()
+                    console.log(data)
+                    break;
+                }catch(error){
+                    console.log(error)
+                    break
+                }
+            }else{
+                console.log("solicitud incorrecta")
+            }
     }
 }
 
