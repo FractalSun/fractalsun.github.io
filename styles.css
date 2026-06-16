@@ -12,8 +12,23 @@
   --color-4-superficie-clara-alt: rgb(230, 230, 230); /* Modificado: variante de superficie clara */
   --color-5-superficie-oscura: rgb(30, 30, 30); /* Modificado: color 5 superficie oscura */
   --color-texto-claro: white;
+  --color-texto-oscuro: rgb(30, 30, 30);
   --color-texto-muted: rgb(100, 100, 100);
   --color-borde-suave: rgba(0, 0, 0, 0.5);
+}
+
+/* === Bloque modo oscuro ===*/
+:root.dark{
+    --color-1-acento: rgb(180, 120, 255); /* Modificado para modo oscuro: acento más brillante */
+    --color-2-acento-hover: rgb(145, 60, 255); /* Hover acento en oscuro */
+    --color-3-fondo-base: rgb(12, 14, 18); /* Fondo principal modo oscuro */
+    --color-4-superficie-clara: rgb(24, 26, 30); /* Superficies claras en oscuro */
+    --color-4-superficie-clara-alt: rgb(28, 30, 34); /* Variante superficie */
+    --color-5-superficie-oscura: rgb(8, 10, 12); /* Superficie más oscura */
+    --color-texto-claro: #282828; /* Texto principal en claro */
+    --color-texto-oscuro: rgb(200, 200, 210); /* Texto secundario en oscuro */
+    --color-texto-muted: rgb(160, 160, 170); /* Texto secundario más visible */
+    --color-borde-suave: rgba(255, 255, 255, 0.08); /* Bordes suaves en claro sobre oscuro */
 }
 
 /* ===========================
@@ -23,6 +38,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 1s ;
 }
 
 html{
@@ -105,7 +121,7 @@ header a{
     padding: 5px 10px;
     text-decoration: none;
     font-weight: bold;
-    color: black;
+    color: var(--color-texto-oscuro);
 }
 
 header a:hover{
