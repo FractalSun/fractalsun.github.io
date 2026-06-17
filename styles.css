@@ -37,8 +37,12 @@
 *{  
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    transition: background-color 1s ;
+    box-sizing: border-box;    
+}
+
+*, *::before, *::after {
+  transition: background-color 0.4s ease, color 0.4s ease,
+              border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 html{
@@ -126,6 +130,26 @@ header a{
 
 header a:hover{
     color:var(--color-1-acento);
+}
+
+/* ===========================
+   Botón toggle modo oscuro
+   =========================== */
+#toggle-mode {
+  font-size:   .8em;
+  font-weight: bold;
+  padding:     5px 16px;
+  border-radius: 15px;
+  border:      1px solid var(--color-borde-suave);
+  background:  var(--color-4-superficie-clara);
+  color:       var(--color-texto-oscuro);
+  box-shadow:  1px 1px 3px var(--color-borde-suave);
+  cursor:      pointer;
+  font-family: inherit;
+  margin-top:  6px; /* respiro respecto a los links en mobile */
+}
+#toggle-mode:hover {
+  background: var(--color-4-superficie-clara-alt);
 }
 
 /* ===========================
@@ -323,6 +347,11 @@ footer .container{
         flex-direction: row;
         padding-bottom: 0;
         padding-right: 20px;
+    }
+
+    #toggle-mode{
+        margin-top: 0;
+        margin-left: 10px; /* separación del link "Contacto" */
     }
 
     #hero h1{
