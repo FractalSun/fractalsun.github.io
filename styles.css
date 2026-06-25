@@ -11,7 +11,7 @@
   --color-4-superficie-clara: rgb(220, 220, 220); /* Modificado: color 4 superficie clara */
   --color-4-superficie-clara-alt: rgb(230, 230, 230); /* Modificado: variante de superficie clara */
   --color-5-superficie-oscura: rgb(30, 30, 30); /* Modificado: color 5 superficie oscura */
-  --color-texto-claro: white;
+  --color-texto-claro: rgb(245, 245, 245);
   --color-texto-oscuro: rgb(30, 30, 30);
   --color-texto-muted: rgb(100, 100, 100);
   --color-borde-suave: rgba(0, 0, 0, 0.5);
@@ -25,8 +25,8 @@
     --color-4-superficie-clara: rgb(24, 26, 30); /* Superficies claras en oscuro */
     --color-4-superficie-clara-alt: rgb(28, 30, 34); /* Variante superficie */
     --color-5-superficie-oscura: rgb(8, 10, 12); /* Superficie más oscura */
-    --color-texto-claro: white; /* Texto principal en claro */
-    --color-texto-oscuro: rgb(211, 211, 219); /* Texto secundario en oscuro */
+    --color-texto-claro: rgb(233, 233, 233); /* Texto principal en claro */
+    --color-texto-oscuro: rgb(233, 233, 233); /* Texto secundario en oscuro */
     --color-texto-muted: rgb(179, 179, 187); /* Texto secundario más visible */
     --color-borde-suave: rgba(255, 255, 255, 0.08); /* Bordes suaves en claro sobre oscuro */
 
@@ -69,7 +69,11 @@ li{font-size: 1.25em;}
 /* ===========================
    Botones
    =========================== */
-button{
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-family: inherit;
     font-size: 1.5em;
     font-weight: bold;
     padding: 10px 20px;
@@ -80,7 +84,7 @@ button{
     background-color:var(--color-1-acento);
     cursor: pointer;
 }
-button:hover{
+.btn:hover{
     background-color: var(--color-2-acento-hover);
 }
 
@@ -179,7 +183,7 @@ header a:hover{
     color: var(--color-texto-claro);
 }
 
-#hero button{
+#hero .btn{
     font-size: 1.75em;
 }
 
