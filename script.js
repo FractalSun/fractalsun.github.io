@@ -1,3 +1,15 @@
+/*
+ * 1. Se guardan referencias al botón y a <html>, donde vive :root.dark{}.
+ * 2. toggleTheme() agrega/quita la clase "dark" del <html>, actualiza el
+ *    texto del botón (🌙 = ya está en oscuro, ☀️ = ya está en claro) y
+ *    guarda la elección en localStorage para futuras visitas.
+ * 3. addEventListener conecta el clic del botón con toggleTheme(); sin
+ *    esta línea la función nunca se ejecutaría.
+ * 4. Al cargar la página (una sola vez), se revisa localStorage o, si es
+ *    la primera visita, la preferencia del sistema operativo, para
+ *    decidir si arrancar en modo oscuro o claro.
+ */
+
 const toggleButton = document.getElementById('toggle-mode');
 const htmlElement = document.documentElement;
 

@@ -19,16 +19,17 @@
 
 /* === Bloque modo oscuro ===*/
 :root.dark{
-    --color-1-acento: rgb(180, 120, 255); /* Modificado para modo oscuro: acento más brillante */
+    --color-1-acento: rgb(159, 81, 240); /* Modificado para modo oscuro: acento más brillante */
     --color-2-acento-hover: rgb(145, 60, 255); /* Hover acento en oscuro */
     --color-3-fondo-base: rgb(12, 14, 18); /* Fondo principal modo oscuro */
     --color-4-superficie-clara: rgb(24, 26, 30); /* Superficies claras en oscuro */
     --color-4-superficie-clara-alt: rgb(28, 30, 34); /* Variante superficie */
     --color-5-superficie-oscura: rgb(8, 10, 12); /* Superficie más oscura */
-    --color-texto-claro: #282828; /* Texto principal en claro */
-    --color-texto-oscuro: rgb(200, 200, 210); /* Texto secundario en oscuro */
-    --color-texto-muted: rgb(160, 160, 170); /* Texto secundario más visible */
+    --color-texto-claro: white; /* Texto principal en claro */
+    --color-texto-oscuro: rgb(211, 211, 219); /* Texto secundario en oscuro */
+    --color-texto-muted: rgb(179, 179, 187); /* Texto secundario más visible */
     --color-borde-suave: rgba(255, 255, 255, 0.08); /* Bordes suaves en claro sobre oscuro */
+
 }
 
 /* ===========================
@@ -73,7 +74,7 @@ button{
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 10px;
-    border: 1px solid var(--color-borde-suave);
+    border: 1.2px solid var(--color-borde-suave);
     box-shadow: 2px 2px 10px var(--color-borde-suave);
     color: var(--color-texto-claro);
     background-color:var(--color-1-acento);
@@ -185,6 +186,9 @@ header a:hover{
 /* ===========================
    About
    =========================== */
+#about {
+    color: var(--color-texto-oscuro);
+}
 #about .container{
     text-align: center;
     padding: 200px 12px;
@@ -235,7 +239,7 @@ header a:hover{
    Productos
    =========================== */
 #nuestros-productos{
-    text-align: center;
+    text-align: center;    
 }
 
 #nuestros-productos .container{
@@ -245,6 +249,7 @@ header a:hover{
 #nuestros-productos h2{
     margin-top: 0;
     font-size: 3em;
+    color: var(--color-texto-oscuro);
 }
 
 #nuestros-productos p{
@@ -257,6 +262,8 @@ header a:hover{
     padding: 70px;
     margin: 20px;
     border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    background-blend-mode: normal;
 }
 
 .carta:first-child{
